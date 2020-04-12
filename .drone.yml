@@ -3,12 +3,6 @@ kind: pipeline
 name: prometheus
 type: docker
 
-trigger:
-  branch:
-  - master
-  event:
-  - push
-
 steps:
 - name: Build
   image: plugins/docker
