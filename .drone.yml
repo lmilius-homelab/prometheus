@@ -1,0 +1,17 @@
+---
+kind: pipeline
+name: prometheus
+type: docker
+
+trigger:
+  branch:
+  - master
+  event:
+  - push
+
+steps:
+- name: Build
+  image: plugins/docker
+  settings:
+    repo: registry.lukemilius.com/prometheus
+    auto_tag: true
